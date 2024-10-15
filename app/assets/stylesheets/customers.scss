@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffe7fd;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #6e0564;
+  margin-bottom: 30px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.table th,
+.table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #f8bde8;
+}
+
+.table th {
+  background-color: #f5acf0;
+  color: white;
+}
+
+.table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  background-color: #f1f1f1;
+}
+
+.button.is-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.button.is-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.button.is-info {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+.link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.customer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.customer-card {
+  border: 2px solid #ea9fd2;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+  text-align: center;
+  width: 220px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  h3 {
+    font-size: 1.2em;
+    margin: 10px 0 5px;
+  }
+
+  p {
+    color: #ff9ee0;
+    font-size: 0.9em;
+  }
+}

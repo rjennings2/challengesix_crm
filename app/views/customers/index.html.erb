@@ -1,0 +1,23 @@
+<h1>Customers</h1>
+
+<div class="navigation-links">
+  <%= link_to 'All Customers', all_customers_path, class: 'button' %>
+  <%= link_to 'Alphabetized Customers', alphabetized_customers_path, class: 'button' %>
+  <%= link_to 'Missing Email Customers', missing_email_customers_path, class: 'button' %>
+</div>
+
+<div class="customer-container">
+  <% @customers.each do |customer| %>
+    <div class="customer-card">
+      <% if customer.image.present? %>
+        <%= image_tag customer.image, alt: customer.full_name, size: "200x300" %>
+      <% else %>
+        <%= image_tag 'placeholder.png', alt: 'No image available', size: "200x300" %>
+      <% end %>
+      <h3><%= customer.full_name %></h3>
+      <p>Phone: <%= customer.phone_number %></p>
+      <p>Email: <%= customer.email || ' ' %></p>
+      <p><%= customer.notes %></p>
+    </div>
+  <% end %>
+</div>

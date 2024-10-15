@@ -1,4 +1,22 @@
 Rails.application.routes.draw do
+  resources :customers do
+    collection do
+      get 'missing_email'
+      get 'alphabetized'
+      get 'all', to: 'customers#index'
+    end
+  end
+
+  root 'customers#index'
+
+  # Remove Devise routes
+  # devise_for :admin_users, ActiveAdmin::Devise.config
+
+  # Define custom routes for login/logout
+  get 'login', to: 'sessions#new', as: 'login'
+  post 'login', to: 'sessions#create', as: 'create_login'
+  delete 'logout', to: 'sessions#destroy', as: 'logout'
+
   ActiveAdmin.routes(self)
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
